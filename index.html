@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>India Casino Bonus</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--bg: #07080d;
+			--panel: rgba(255, 255, 255, 0.06);
+			--glass: rgba(255, 255, 255, 0.08);
+			--border: rgba(255, 255, 255, 0.14);
+			--neon: #2ce8ff;
+			--gold1: #ffcb52;
+			--gold2: #ff9a1f;
+			--accent: #ff2d55;
+			--text: #f8f9ff;
+			--muted: #aab3d5;
+		}
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		html, body { height: 100%; }
+		body {
+			font-family: 'Montserrat', 'Segoe UI', sans-serif;
+			background: radial-gradient(circle at 15% 20%, rgba(255, 45, 85, 0.08), transparent 35%),
+							radial-gradient(circle at 85% 10%, rgba(44, 232, 255, 0.12), transparent 38%),
+							var(--bg);
+			color: var(--text);
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+		body::before {
+			content: '';
+			position: fixed;
+			inset: -20%;
+			background: radial-gradient(circle at 20% 30%, rgba(255, 154, 31, 0.08), transparent 45%),
+							radial-gradient(circle at 80% 20%, rgba(44, 232, 255, 0.12), transparent 40%),
+							radial-gradient(circle at 50% 80%, rgba(255, 45, 85, 0.09), transparent 50%);
+			filter: blur(30px);
+			z-index: 0;
+			pointer-events: none;
+		}
+		.page {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			max-width: 480px;
+			padding: 72px 16px 20px;
+			display: grid;
+			grid-template-rows: auto auto auto 1fr auto auto;
+			gap: 16px;
+			align-items: center;
+			justify-items: center;
+		}
+		.trust { font-size: 12px; color: var(--muted); letter-spacing: 0.2px; }
+		.brand-hero {
+			font-size: 24px;
+			font-weight: 900;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			background: linear-gradient(120deg, var(--gold1), var(--neon));
+			-webkit-background-clip: text;
+			color: transparent;
+			text-shadow:
+				0 0 18px rgba(44, 232, 255, 0.45),
+				0 0 36px rgba(255, 154, 31, 0.35);
+			padding: 6px 0;
+			position: relative;
+			display: inline-block;
+		}
+		.brand-hero::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -4px;
+			height: 2px;
+			border-radius: 999px;
+			background: linear-gradient(120deg, rgba(255, 203, 82, 0.8), rgba(44, 232, 255, 0.8));
+			box-shadow: 0 0 14px rgba(44, 232, 255, 0.6);
+			opacity: 0.9;
+		}
+		.headline { font-size: 26px; line-height: 1.15; text-align: center; font-weight: 800; }
+		.headline span { background: linear-gradient(120deg, var(--gold1), var(--gold2)); -webkit-background-clip: text; color: transparent; }
+		.sub { color: var(--muted); font-size: 13px; text-align: center; }
+
+		.card-deck {
+			width: 100%;
+			max-width: 540px;
+			border-radius: 24px;
+			padding: 24px;
+			background: linear-gradient(145deg, rgba(255, 154, 31, 0.12), rgba(44, 232, 255, 0.12));
+			border: 1px solid var(--border);
+			box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 18px rgba(44, 232, 255, 0.35);
+			display: grid;
+			grid-template-rows: auto 1fr;
+			gap: 12px;
+			position: relative;
+			overflow: hidden;
+		}
+		.card-deck::before {
+			content: '';
+			position: absolute;
+			inset: -12px;
+			background: radial-gradient(circle at 50% 20%, rgba(44, 232, 255, 0.18), transparent 50%);
+			filter: blur(24px);
+			opacity: 0.9;
+			z-index: 0;
+		}
+		.card-deck::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.16), transparent 46%);
+			pointer-events: none;
+		}
+		.slot-top { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 13px; }
+		.game-tiles {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+		.banner {
+			position: relative;
+			width: 100%;
+			padding-top: 22.73%; /* 4.4:1 ratio */
+			border-radius: 14px;
+			overflow: hidden;
+			background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55));
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.55), 0 12px 26px rgba(0, 0, 0, 0.35);
+			transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+			text-decoration: none;
+		}
+		.banner::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: none;
+			pointer-events: none;
+		}
+		.banner:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 16px 30px rgba(0, 0, 0, 0.38); border-color: rgba(44, 232, 255, 0.25); }
+		/* Banners now image-only; keep gradient overlay for contrast */
+		.banner-aviator { background-image: url('IPL.png'); }
+		.banner-cricket { background-image: url('Aviator.png'); }
+		.banner-casino { background-image: url('casino.png'); }
+
+		.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+		.badge {
+			background: var(--glass);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 10px 8px;
+			text-align: center;
+			font-size: 12px;
+			color: var(--text);
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+		}
+
+		.cta {
+			width: 100%;
+			max-width: 360px;
+			padding: 16px 18px;
+			font-size: 16px;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			border: none;
+			border-radius: 16px;
+			color: #0b0c0f;
+			background: linear-gradient(120deg, var(--gold1), var(--gold2));
+			box-shadow: 0 18px 40px rgba(255, 154, 31, 0.45), 0 0 18px rgba(255, 203, 82, 0.5);
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+			animation: pulse 1.8s ease-in-out infinite, sheen 3s linear infinite;
+			position: relative;
+		}
+		.cta::before {
+			content: '';
+			position: absolute;
+			inset: -4px;
+			border-radius: 20px;
+			background: radial-gradient(circle, rgba(44, 232, 255, 0.18), transparent 55%);
+			z-index: 0;
+			filter: blur(8px);
+			opacity: 0.9;
+		}
+		.cta::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.35), transparent 60%);
+			transform: translateX(-100%);
+			animation: shine 2.8s ease-in-out infinite;
+			z-index: 0;
+			pointer-events: none;
+		}
+		.cta:active { transform: scale(0.98); }
+		.cta:hover::before { opacity: 1; }
+		.cta-text { position: relative; z-index: 2; }
+		@keyframes pulse {
+			0%, 100% { box-shadow: 0 18px 40px rgba(255, 154, 31, 0.45), 0 0 18px rgba(255, 203, 82, 0.5); }
+			50% { box-shadow: 0 20px 48px rgba(255, 154, 31, 0.65), 0 0 24px rgba(44, 232, 255, 0.45); }
+		}
+		@keyframes shine { 0% { transform: translateX(-120%); } 50% { transform: translateX(40%); } 100% { transform: translateX(120%); } }
+		@keyframes sheen { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.06); } }
+
+		.money-layer {
+			pointer-events: none;
+			position: fixed;
+			inset: 0;
+			overflow: hidden;
+			z-index: 6;
+		}
+		.money {
+			position: absolute;
+			font-size: 18px;
+			color: #ffd166;
+			text-shadow: 0 0 10px rgba(255, 203, 82, 0.7);
+			opacity: 0.9;
+			animation: drop 2.4s linear forwards;
+		}
+		.money.big { font-size: 22px; color: #ffcb52; }
+		@keyframes drop {
+			0% { transform: translateY(-40px) rotate(0deg); opacity: 0; }
+			10% { opacity: 1; }
+			100% { transform: translateY(110vh) rotate(12deg); opacity: 0; }
+		}
+
+		.urgency {
+			text-align: center;
+			font-size: 13px;
+			color: #fdf5e6;
+			text-shadow: 0 0 10px rgba(255, 203, 82, 0.35), 0 1px 6px rgba(0, 0, 0, 0.4);
+		}
+		.timer {
+			font-weight: 850;
+			color: var(--neon);
+			letter-spacing: 0.7px;
+			text-shadow: 0 0 12px rgba(44, 232, 255, 0.55);
+		}
+		.legal { text-align: center; font-size: 11px; color: var(--muted); line-height: 1.4; padding: 4px 12px; }
+
+		/* Entry modal */
+		.entry-modal {
+			position: fixed;
+			inset: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: radial-gradient(circle at 20% 20%, rgba(255, 45, 85, 0.12), transparent 45%),
+				radial-gradient(circle at 80% 30%, rgba(44, 232, 255, 0.12), transparent 46%),
+				rgba(4, 6, 14, 0.78);
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.35s ease;
+			z-index: 20;
+			backdrop-filter: blur(6px);
+		}
+		.entry-modal.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+		.entry-card {
+			position: relative;
+			width: min(420px, 88vw);
+			padding: 26px 22px 22px;
+			border-radius: 18px;
+			background: linear-gradient(145deg, rgba(255, 154, 31, 0.14), rgba(44, 232, 255, 0.14));
+			box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55), 0 0 18px rgba(44, 232, 255, 0.35);
+			border: 1px solid var(--border);
+			overflow: hidden;
+			transform: translateY(12px) scale(0.98);
+			transition: transform 0.4s ease 0.05s;
+		}
+		.entry-modal.active .entry-card { transform: translateY(0) scale(1); }
+		.entry-card::before {
+			content: '';
+			position: absolute;
+			inset: -18px;
+			background: radial-gradient(circle at 50% 22%, rgba(255, 255, 255, 0.16), transparent 42%);
+			pointer-events: none;
+		}
+		.entry-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			border: 1px solid rgba(255, 255, 255, 0.28);
+			background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 45, 85, 0.18));
+			color: var(--text);
+			font-weight: 800;
+			font-size: 16px;
+			cursor: pointer;
+			box-shadow: 0 10px 18px rgba(0, 0, 0, 0.32);
+			transition: transform 0.18s ease, box-shadow 0.18s ease;
+		}
+		.entry-close:hover { transform: scale(1.05) rotate(3deg); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42); }
+		.entry-close:active { transform: scale(0.95); }
+		.spinner-wrap {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			margin: 10px auto 8px;
+			filter: drop-shadow(0 0 14px rgba(44, 232, 255, 0.35));
+		}
+		.spinner-wheel {
+			--stop-rot: 0deg;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50%;
+			background: conic-gradient(
+				#ff2d55 0deg 30deg,
+				#2ce8ff 30deg 60deg,
+				#ffcb52 60deg 90deg,
+				#31d67b 90deg 120deg,
+				#9f7bff 120deg 150deg,
+				#ff9a1f 150deg 180deg,
+				#ff2d55 180deg 210deg,
+				#2ce8ff 210deg 240deg,
+				#ffcb52 240deg 270deg,
+				#31d67b 270deg 300deg,
+				#9f7bff 300deg 330deg,
+				#ff9a1f 330deg 360deg
+			);
+			transform: rotate(var(--stop-rot));
+			box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.35);
+		}
+		.wheel-numbers {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50%;
+			pointer-events: none;
+			z-index: 2;
+			transform: rotate(var(--stop-rot, 0deg));
+		}
+		.wheel-number {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform-origin: center;
+			transform: translate(-50%, -50%) rotate(var(--deg)) translateY(-82px);
+			font-weight: 900;
+			font-size: 18px;
+			color: #ffffff;
+			text-shadow:
+				0 0 6px rgba(0, 0, 0, 0.55),
+				0 2px 6px rgba(0, 0, 0, 0.65),
+				0 0 12px rgba(255, 255, 255, 0.35),
+				0 0 1px rgba(255, 255, 255, 0.9);
+			letter-spacing: 0.2px;
+			font-variant-numeric: tabular-nums;
+		}
+		.wheel-number span { display: block; }
+		.wheel-center {
+			position: absolute;
+			inset: 34px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.65));
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			box-shadow: inset 0 0 16px rgba(44, 232, 255, 0.32);
+		}
+		.wheel-pointer {
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			border-bottom: 18px solid #ffcb52;
+			filter: drop-shadow(0 0 8px rgba(255, 203, 82, 0.55));
+			z-index: 3;
+		}
+		.entry-modal.spin-complete .spinner-wheel { animation: none; transform: rotate(var(--stop-rot)); }
+		.modal-actions { margin-top: 14px; display: flex; justify-content: center; }
+		.modal-cta {
+			position: relative;
+			padding: 13px 18px;
+			border-radius: 14px;
+			border: none;
+			font-weight: 850;
+			font-size: 15px;
+			letter-spacing: 0.5px;
+			color: #0b0c10;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+			background: linear-gradient(120deg, #ffd166, #ff9a1f 55%, #ffcb52);
+			box-shadow:
+				0 14px 28px rgba(255, 154, 31, 0.48),
+				0 0 16px rgba(255, 203, 82, 0.55);
+			cursor: pointer;
+			transition: transform 0.15s ease, box-shadow 0.2s ease;
+			overflow: hidden;
+		}
+		.modal-cta:active { transform: scale(0.97); }
+		.modal-cta::before {
+			content: '';
+			position: absolute;
+			inset: -6px;
+			border-radius: 16px;
+			background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.3), transparent 55%);
+			filter: blur(10px);
+			opacity: 0.9;
+			z-index: 0;
+		}
+		.modal-cta::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(120deg, transparent 45%, rgba(255, 255, 255, 0.45), transparent 55%);
+			transform: translateX(-120%);
+			animation: shine 2.6s ease-in-out infinite;
+			z-index: 1;
+		}
+		.modal-cta span { position: relative; z-index: 2; }
+		@keyframes spinWheel {
+			0% { transform: rotate(0deg); }
+			70% { transform: rotate(calc(var(--stop-rot) + 320deg)); }
+			100% { transform: rotate(var(--stop-rot)); }
+		}
+		.win-display {
+			opacity: 0;
+			transform: translateY(10px) scale(0.96);
+			transition: opacity 0.28s ease, transform 0.32s ease;
+			text-align: center;
+		}
+		.entry-modal.spin-complete .win-display {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+		.win-multiplier {
+			font-size: 38px;
+			font-weight: 900;
+			letter-spacing: 1px;
+			background: linear-gradient(120deg, var(--gold1), var(--neon));
+			-webkit-background-clip: text;
+			color: transparent;
+			text-shadow: 0 0 18px rgba(44, 232, 255, 0.4);
+			animation: pop 0.5s ease;
+		}
+		.player-name {
+			margin-top: 6px;
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--text);
+			text-shadow: 0 0 16px rgba(255, 203, 82, 0.35);
+		}
+		.modal-hint { color: var(--muted); font-size: 13px; text-align: center; margin-top: 10px; }
+		.entry-modal.spin-complete .spinner-ring,
+		.entry-modal.spin-complete .spark { animation: none; opacity: 0.12; filter: blur(1px); }
+		@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+		@keyframes pop { 0% { transform: scale(0.7); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); } }
+
+		.win-popup {
+			position: fixed;
+			left: 50%;
+			top: 1px;
+			transform: translateX(-50%);
+			background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(14, 19, 30, 0.9));
+			border: 1px solid rgba(255, 255, 255, 0.16);
+			color: #fefefe;
+			padding: 12px 16px;
+			border-radius: 14px;
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 1.45;
+			display: none;
+			box-shadow:
+				0 14px 32px rgba(0, 0, 0, 0.45),
+				0 0 14px rgba(44, 232, 255, 0.28);
+			z-index: 8;
+			animation: toastSlide 0.3s ease, toastPulse 2s ease-in-out infinite alternate;
+		}
+		@keyframes toastSlide { from { transform: translate(-50%, -12px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+		@keyframes toastPulse { from { box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35), 0 0 10px rgba(44, 232, 255, 0.18); } to { box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 203, 82, 0.35); } }
+
+		@media (min-height: 820px) {
+			.headline { font-size: 28px; }
+			.card-deck { max-width: 480px; padding: 24px; }
+			.cta { font-size: 17px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<div class="trust">Trusted Indian Gaming Spot | 50,000+ Players</div>
+		<div class="brand-hero">Billy777</div>
+		<div class="headline">💰 Get <span>10% Bonus</span> with 1600+ Games</div>
+		<div class="sub">Instant UPI Payouts. New Players Only. Join now</div>
+
+		<div class="card-deck">
+			<div class="slot-top"><span>Join Fast</span><span style="color: var(--neon);">High RTP</span></div>
+			<div class="game-tiles">
+				<a class="banner banner-aviator" aria-label="Aviator banner" href="https://wa.me/919127118713?text=Hi%2C%20I%20want%20to%20join%21" target="_blank" rel="noopener"></a>
+				<a class="banner banner-casino" aria-label="Casino banner" href="https://wa.me/919127118713?text=Hi%2C%20I%20want%20to%20join%21" target="_blank" rel="noopener"></a>
+				<a class="banner banner-cricket" aria-label="Cricket banner" href="https://wa.me/919127118713?text=Hi%2C%20I%20want%20to%20join%21" target="_blank" rel="noopener"></a>
+			</div>
+		</div>
+
+		<div class="benefits">
+			<div class="badge">⚡<br>Instant UPI Cashouts</div>
+			<div class="badge">🎲<br>Teen Patti, Slots & Crash</div>
+			<div class="badge">🏆<br>Guaranteed Welcome Bonus</div>
+		</div>
+
+		<button class="cta" id="cta"><span class="cta-text">Grab Your ID Now</span></button>
+
+		<div class="urgency">Only 23 India bonus spots left today • <span class="timer" id="timer">09:59</span></div>
+		<div class="legal">18+ only. Play responsibly. Terms & conditions apply. This is a promotional page; bonuses are subject to eligibility.</div>
+	</div>
+
+	<div class="win-popup" id="popup">Arjun just won ₹12,400</div>
+	<div class="money-layer" id="moneyLayer"></div>
+
+	<div class="entry-modal" id="entryModal" aria-hidden="true">
+		<div class="entry-card">
+			<button class="entry-close" id="entryClose" aria-label="Close popup">✕</button>
+			<div class="spinner-wrap" id="entrySpinner">
+				<div class="spinner-wheel" id="spinnerWheel"></div>
+				<div class="wheel-numbers" id="wheelNumbers"></div>
+				<div class="wheel-center"></div>
+				<div class="wheel-pointer"></div>
+			</div>
+			<div class="win-display" id="winDisplay">
+				<div class="win-multiplier">×5 WIN</div>
+				<div class="player-name" id="playerName">Player</div>
+			</div>
+			<div class="modal-hint">Claim the bonus while it lasts</div>
+			<div class="modal-actions">
+				<button class="modal-cta" id="modalWhatsApp">Claim on WhatsApp</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Prevent scroll on mobile
+		document.body.style.height = '100vh';
+		document.body.style.overflow = 'hidden';
+
+		const waLink = 'https://wa.me/919127118713?text=Hi%2C%20I%20want%20to%20join%21';
+		function openWhatsApp() {
+			window.open(waLink, '_blank', 'noopener');
+			sessionStorage.setItem('waOpened', '1');
+		}
+
+		const cta = document.getElementById('cta');
+		const ctaDefault = 'Play Now & Claim Bonus';
+		cta.addEventListener('click', () => {
+			cta.textContent = 'Opening WhatsApp...';
+			setTimeout(() => { openWhatsApp(); }, 150);
+			setTimeout(() => { cta.textContent = ctaDefault; }, 2000);
+		});
+
+		// Auto-open WhatsApp once per session shortly after landing
+		if (!sessionStorage.getItem('waOpened')) {
+			setTimeout(openWhatsApp, 800);
+		}
+
+		// Countdown timer (10 minutes)
+		const timerEl = document.getElementById('timer');
+		let remaining = 10 * 60; // seconds
+		setInterval(() => {
+			remaining = Math.max(0, remaining - 1);
+			const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+			const s = String(remaining % 60).padStart(2, '0');
+			timerEl.textContent = `${m}:${s}`;
+		}, 1000);
+
+		// Fake live win popup
+		const popup = document.getElementById('popup');
+		const moneyLayer = document.getElementById('moneyLayer');
+		const names = ['Arjun', 'Priya', 'Rohit', 'Neha', 'Kabir', 'Aanya', 'Vikram'];
+		const amounts = [12400, 18600, 22300, 5400, 47800, 19900, 33400];
+		const games = ['Aviator Crash', 'Cricket Cash', 'Teen Patti Blaze', 'Roulette Rush'];
+
+		// Entry modal with spinner then win state
+		const entryModal = document.getElementById('entryModal');
+		const entryClose = document.getElementById('entryClose');
+		const playerNameEl = document.getElementById('playerName');
+		const spinnerWheel = document.getElementById('spinnerWheel');
+		const wheelNumbers = document.getElementById('wheelNumbers');
+		const modalWhatsApp = document.getElementById('modalWhatsApp');
+		const winMultiplierEl = document.querySelector('.win-multiplier');
+		const wheelNumberEls = () => wheelNumbers.querySelectorAll('.wheel-number');
+		const wheelValues = [5, 10, 2, 8, 3, 6, 4, 7, 1, 9, 12, 11];
+		wheelNumbers.innerHTML = wheelValues
+			.map((num, i) => `<div class="wheel-number" style="--deg:${i * 30 + 15}deg"><span>${num}</span></div>`)
+			.join('');
+		setTimeout(() => triggerEntryModal(), 4000);
+
+		function triggerEntryModal() {
+			if (!entryModal || sessionStorage.getItem('entryShown')) return;
+			sessionStorage.setItem('entryShown', '1');
+			const name = names[Math.floor(Math.random() * names.length)];
+			playerNameEl.textContent = name;
+			const targetIndex = Math.floor(Math.random() * wheelValues.length);
+			const targetValue = wheelValues[targetIndex];
+			winMultiplierEl.textContent = `×${targetValue} WIN`;
+			const centerAngle = targetIndex * 30 + 15; // center of slice
+			const spins = 3 + Math.floor(Math.random() * 2); // 3-4 full spins
+			const stopDeg = spins * 360 - centerAngle;
+			spinnerWheel.style.setProperty('--stop-rot', `${stopDeg}deg`);
+			wheelNumbers.style.setProperty('--stop-rot', `0deg`);
+			spinnerWheel.style.animation = 'none';
+			wheelNumbers.style.animation = 'none';
+			spinnerWheel.style.transform = 'rotate(0deg)';
+			wheelNumbers.style.transform = 'rotate(0deg)';
+			wheelNumberEls().forEach((el, i) => {
+				const deg = i * 30 + 15;
+				el.style.transform = `translate(-50%, -50%) rotate(${deg}deg) translateY(-82px)`;
+			});
+			void spinnerWheel.offsetWidth; // restart animation
+			const spinAnim = 'spinWheel 2.2s cubic-bezier(0.22, 0.7, 0.24, 1) forwards';
+			spinnerWheel.style.animation = spinAnim;
+			wheelNumbers.style.animation = spinAnim;
+			entryModal.setAttribute('aria-hidden', 'false');
+			entryModal.classList.remove('spin-complete');
+			entryModal.classList.add('active');
+			setTimeout(() => {
+				spinnerWheel.style.animation = 'none';
+				wheelNumbers.style.animation = 'none';
+				spinnerWheel.style.transform = `rotate(${stopDeg}deg)`;
+				wheelNumbers.style.transform = `rotate(${stopDeg}deg)`;
+				wheelNumbers.style.setProperty('--stop-rot', `${stopDeg}deg`);
+				wheelNumberEls().forEach((el, i) => {
+					const deg = i * 30 + 15;
+					el.style.transform = `translate(-50%, -50%) rotate(${deg}deg) translateY(-82px) rotate(${-deg - stopDeg}deg)`;
+				});
+				entryModal.classList.add('spin-complete');
+			}, 2250);
+		}
+
+		function closeEntryModal() {
+			entryModal.classList.remove('active', 'spin-complete');
+			entryModal.setAttribute('aria-hidden', 'true');
+		}
+
+		entryClose?.addEventListener('click', closeEntryModal);
+		entryModal?.addEventListener('click', (e) => { if (e.target === entryModal) closeEntryModal(); });
+		modalWhatsApp?.addEventListener('click', () => { closeEntryModal(); openWhatsApp(); });
+		function showWin() {
+			const name = names[Math.floor(Math.random() * names.length)];
+			const amt = amounts[Math.floor(Math.random() * amounts.length)].toLocaleString();
+			const game = games[Math.floor(Math.random() * games.length)];
+			popup.textContent = `${name} just won ₹${amt} on ${game}`;
+			popup.style.display = 'block';
+			setTimeout(() => { popup.style.display = 'none'; }, 3200);
+		}
+		setTimeout(showWin, 1400);
+		setInterval(showWin, 5200);
+
+		// Money rain for visual excitement
+		function dropMoney() {
+			const span = document.createElement('span');
+			span.className = Math.random() > 0.7 ? 'money big' : 'money';
+			span.textContent = Math.random() > 0.5 ? '₹' : '💵';
+			span.style.left = `${Math.random() * 100}%`;
+			span.style.animationDuration = `${1.8 + Math.random() * 1.6}s`;
+			moneyLayer.appendChild(span);
+			setTimeout(() => span.remove(), 2400);
+		}
+		setInterval(dropMoney, 450);
+
+		// Tile micro-motion handled via CSS animations
+	</script>
+</body>
+</html>
